@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;500;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <title>BEM Example</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__container__title">Pop It</h1>
+      <nav class="header__container__nav">
+          <ul class="header__container__menu">
+              <li class="header__menu-item"><a class="header__menu-link" href="#">Inicio</a></li>
+              <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" href="#">Acerca</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#">Contacto</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div class="header__content">
+      <div class="header__content__information">
+        <h2 class="header__content__title">POP IT!</h2>
+        <p class="header__content_p">
+          Pop It, es una experiencia unica para tus hijos, comparte con ellos la oportunidad de divertirse!
+        </p>
+        <button class="header__content__button">
+          Lo Quiero!
+        </button>
+      </div>
+      <figure class="header_content_image">
+        <img src="./assets//background.png" alt="" class="header_content_img">
+      </figure>
+    </div>
+  </header>
+  <main class="main__container">
+      <section class="main__container__section_1">
+          <h3 class="main__container__section__title_1">¿Que es Pop It?</h3>
+          <p class="main__container__section__p">
+            Pop it es la oportunidad perfecta para que tus hijos parendan jugando, son juguetes que permiten
+            desarrollar la motricidad de quienes interctuan con ellos, permitiendoles generar mayor facilidad
+            a la hora de ejecutar proceso de mayor dificultad en su vida diaria
+          </p>
+      </section>
+      <section class="main__container__section_2">
+        <h3 class="main__container__section__title_1">Mira todos nuestros Pop It!</h3>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="main__container__section_2__card">
+                    <img src="./assets/square.png" alt="square" class="main__container__section_2__card__img">
+                    <span class="main__container__section_2__card_text">Pop it con multiples colores</span>
+                    <button class="main__container__section_2__card_button">Comprar</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main__container__section_2__card">
+                    <img src="./assets/amongus.png" alt="square" class="main__container__section_2__card__img">
+                    <span class="main__container__section_2__card_text">Pop it con multiples colores</span>
+                    <button class="main__container__section_2__card_button">Comprar</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main__container__section_2__card">
+                    <img src="./assets/round.png" alt="square" class="main__container__section_2__card__img">
+                    <span class="main__container__section_2__card_text">Pop it con multiples colores</span>
+                    <button class="main__container__section_2__card_button">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            
+              <div class="swiper-scrollbar"></div>
+            </div>
+          
+        
+      </section>
+      <section class="main__container__section_3">
+        <div class="main__container__section_3_content">
+          <h3 class="main__container__section__title_1" >Ven y pruebalo!</h3>
+          <p class="main__container__section__p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+        <div class="main__container__section_3_image">
+          <img src="./assets/photo.jpg" alt="photo" class="main__container__section_3_img">
+        </div>
+      </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__option__list">
+      <li class="footer__option__item"><a href="" class="footer__option__item__link first">Pop It.com</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Contactanos</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Quienes Somos</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Trabaja con nosotros</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Poliitica de privacidad</a></li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+        const swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        direction: 'horizontal',
+        loop: true,
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+          },
+          1000: {
+            
+            slidesPerView: 3,
+          }
+        },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamycBullets: true,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
+  </script>
+</body>
+</html>
